@@ -1,0 +1,164 @@
+@use "constants";
+
+body {
+  background-color: constants.$color-background;
+  box-sizing: border-box;
+  min-width: 300px;
+  font-family:
+    "Segoe UI", "Helvetica Neue", Verdana, Helvetica, Arial, sans-serif;
+  color: constants.$color-text;
+  font-size: 14px;
+
+  @media (min-width: constants.$middle-screen-min-width) {
+    overflow: hidden;
+  }
+
+  @media (max-width: constants.$middle-screen-max-width) {
+    font-size: 12px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  display: flex;
+  width: 100%;
+  line-height: inherit;
+  margin: 0;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 22px;
+  margin-top: 32px;
+
+  @media (max-width: constants.$middle-screen-max-width) {
+    font-size: 35px;
+  }
+}
+
+h2 {
+  font-size: 35px;
+
+  @media (max-width: constants.$middle-screen-max-width) {
+    font-size: 30px;
+  }
+}
+
+h3 {
+  font-size: 30px;
+
+  @media (max-width: constants.$middle-screen-max-width) {
+    font-size: 25px;
+  }
+}
+
+b,
+strong {
+  font-family: sans-serif;
+}
+
+a:not(.btn) {
+  color: constants.$color-hover;
+  cursor: pointer;
+}
+
+a:not(.btn):hover {
+  color: constants.$color-hover;
+}
+
+a:not(.btn):active {
+  color: constants.$color-hover;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+
+  #app-wrapper {
+    position: relative;
+    height: 100%;
+    width: calc(100vw - 150px);
+    overflow: hidden auto;
+
+    @media (max-width: constants.$mobile-screen-max-width) {
+      width: calc(100vw - 75px);
+    }
+  }
+}
+
+/* General classes */
+.full-width {
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.bold {
+  font-family: Arial, sans-serif;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.error {
+  // needs important, cus error is the most important thing. Even if a specific class tells it to be different.
+  border: 1px solid constants.$color-error !important;
+}
+
+.link {
+  color: constants.$color-url;
+  cursor: pointer;
+  text-decoration: underline;
+
+  .small {
+    font-size: 12px;
+  }
+}
+
+/* Standard margin */
+.margin-right {
+  margin-right: constants.$standard-gap-big;
+
+  @media (max-width: constants.$middle-big-screen-max-width) {
+    margin-right: constants.$standard-gap-small;
+  }
+}
+
+.margin-left {
+  margin-left: constants.$standard-gap-big;
+
+  @media (max-width: constants.$middle-big-screen-max-width) {
+    margin-left: constants.$standard-gap-small;
+  }
+}
+
+.margin-top {
+  margin-top: constants.$standard-gap-big;
+
+  @media (max-width: constants.$middle-big-screen-max-width) {
+    margin-top: constants.$standard-gap-small;
+  }
+}
+
+.margin-bottom {
+  margin-bottom: constants.$standard-gap-big;
+
+  @media (max-width: constants.$middle-big-screen-max-width) {
+    margin-bottom: constants.$standard-gap-small;
+  }
+}
+
+.no-margin {
+  margin: 0;
+}
