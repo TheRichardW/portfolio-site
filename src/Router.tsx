@@ -4,6 +4,7 @@ import {
   createRootRoute,
   Outlet,
 } from "@tanstack/react-router";
+import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
@@ -12,6 +13,7 @@ import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 const rootRoute = createRootRoute({
   component: () => (
     <>
+      <NavBar />
       <div id="app-wrapper">
         <Outlet />
       </div>

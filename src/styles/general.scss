@@ -8,6 +8,7 @@ body {
     "Segoe UI", "Helvetica Neue", Verdana, Helvetica, Arial, sans-serif;
   color: constants.$color-text;
   font-size: 14px;
+  margin: 0;
 
   @media (min-width: constants.$middle-screen-min-width) {
     overflow: hidden;
@@ -51,6 +52,10 @@ h3 {
   @media (max-width: constants.$middle-screen-max-width) {
     font-size: 25px;
   }
+}
+
+span {
+  font-size: 20px;
 }
 
 b,
